@@ -1,7 +1,7 @@
 {
     "name": "PWA demo",
     "short_name": "pwa",
-    "start_url": "/pwa-demo",
+    "start_url": "/pwa-demo/index.html",
     "scope": "/pwa-demo/",
     "display": "standalone",
     "background_color": "#ffffff",
