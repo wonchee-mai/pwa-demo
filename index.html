@@ -7,13 +7,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>WC PWA Demo App</title>
+    <title>Stlite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@stlite/browser@0.76.0/build/style.css"
+    />
     <link rel="manifest" href="manifest.json" />
   </head>
   <body>
-    <div id="root">
-      This is a test PWA.
-    </div>
+    <div id="root"></div>
     <script type="module">
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -25,6 +27,17 @@
                     });
             });
         }
+        
+      import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@0.76.0/build/stlite.js";
+      mount(
+        `
+import streamlit as st
+
+name = st.text_input('Your name')
+st.write("Hello,", name or "world")
+`,
+        document.getElementById("root"),
+      );
     </script>
   </body>
 </html>
