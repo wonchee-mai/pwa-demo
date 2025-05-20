@@ -1,8 +1,8 @@
 {
     "name": "PWA demo",
     "short_name": "pwa",
-    "start_url": "https://wonchee-mai.github.io/pwa-demo/index.html",
-    "scope": "https://wonchee-mai.github.io/pwa-demo/",
+    "start_url": "/pwa-demo/",
+    "scope": "/pwa-demo/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
