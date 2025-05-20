@@ -1,11 +1,12 @@
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open('static-cache-v1').then(cache => {
+            const prefix = "/pwa-demo"
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/manifest.json',
-                '/assets/logo.png'
+                prefix,
+                `${prefix}/index.html`,
+                `${prefix}/manifest.json`,
+                `${prefix}/assets/logo.png`
             ]);
         })
     );
